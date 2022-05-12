@@ -200,6 +200,9 @@ let capslock;
 let pressed = new Set();
 
 document.addEventListener('keydown', function(event) {
+    if(event.code == "F12") {
+        return false;
+    }
     pressed.add(event.code);
 
     if(pressed.size > 2) {
